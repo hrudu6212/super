@@ -1,0 +1,149 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f3f4f6;
+  color: #1f2937;
+  margin: 0;
+  padding: 0;
+}
+
+.dashboard-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+h1 {
+  text-align: center;
+  color: #111827;
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 15px;
+}
+
+.section-card {
+  margin-bottom: 30px;
+  padding: 25px;
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.section-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.5rem;
+  color: #374151;
+  margin-top: 0;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 10px;
+}
+
+.tennis-goal {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.tennis-note {
+  margin-top: 15px;
+  font-style: italic;
+  color: #6b7280;
+}
+
+.study-item {
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+.study-label {
+  width: 180px;
+  font-weight: 600;
+  color: #4b5563;
+}
+
+.study-range {
+  flex-grow: 1;
+  margin: 0 20px;
+  accent-color: #10b981;
+}
+
+.study-value {
+  width: 60px;
+  text-align: right;
+  font-weight: 700;
+  color: #10b981;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #374151;
+}
+
+.text-input, .textarea-input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.text-input:focus, .textarea-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.money-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+@media (max-width: 640px) {
+  .money-grid {
+    grid-template-columns: 1fr;
+  }
+  .study-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .study-label {
+    margin-bottom: 10px;
+  }
+  .study-range {
+    margin: 10px 0;
+    width: 100%;
+  }
+  .study-value {
+    text-align: left;
+  }
+}
