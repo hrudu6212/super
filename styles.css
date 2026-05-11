@@ -128,6 +128,100 @@ h1 {
   gap: 25px;
 }
 
+/* Tabs Navigation */
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 10px;
+}
+
+.tabs button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  background: none;
+  color: #6b7280;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.tabs button:hover {
+  background-color: #f3f4f6;
+  color: #111827;
+}
+
+.tabs button.active {
+  background-color: #3b82f6;
+  color: white;
+}
+
+/* Logging UI */
+.log-btn {
+  margin-top: 15px;
+  padding: 10px 15px;
+  background-color: #10b981;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.log-btn:hover {
+  background-color: #059669;
+}
+
+.small-btn {
+  padding: 8px 12px;
+  font-size: 0.9rem;
+}
+
+.log-section {
+  margin-top: 25px;
+  padding-top: 15px;
+  border-top: 1px dashed #d1d5db;
+}
+
+.log-section h3, .log-section h4 {
+  margin-top: 0;
+  color: #4b5563;
+}
+
+.log-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.log-table th, .log-table td {
+  border: 1px solid #e5e7eb;
+  padding: 8px 12px;
+  text-align: left;
+}
+
+.log-table th {
+  background-color: #f9fafb;
+}
+
+.log-list {
+  list-style: none;
+  padding: 0;
+}
+
+.log-list li {
+  padding: 8px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.log-list li:last-child {
+  border-bottom: none;
+}
+
 @media (max-width: 640px) {
   .money-grid {
     grid-template-columns: 1fr;
