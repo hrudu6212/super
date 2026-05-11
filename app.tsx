@@ -18,68 +18,70 @@ export default function ImprovementDashboard() {
   };
 
   return (
-    <div style={{ fontFamily: 'Arial, sans-serif', maxWidth: '800px', margin: '0 auto', padding: '20px' }}>
+    <div className="dashboard-container">
       <h1>Hruddayansh's Improvement Dashboard</h1>
 
       {/* Tennis Section */}
-      <section style={{ marginBottom: '30px', padding: '20px', border: '1px solid #ccc', borderRadius: '8px' }}>
-        <h2>🎾 Tennis</h2>
-        <p><strong>Mindset Goal:</strong> Only hitting hard at any matter.</p>
-        <p><em>Focus on power and aggressive play style during all practice sessions and matches.</em></p>
+      <section className="section-card">
+        <h2 className="section-title">🎾 Tennis</h2>
+        <div className="tennis-goal">
+          <strong>Mindset Goal:</strong> Only hitting hard at any matter.
+        </div>
+        <p className="tennis-note">Focus on power and aggressive play style during all practice sessions and matches.</p>
       </section>
 
       {/* Study Section */}
-      <section style={{ marginBottom: '30px', padding: '20px', border: '1px solid #ccc', borderRadius: '8px' }}>
-        <h2>📚 Study (2026-27 CBSE Batch)</h2>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+      <section className="section-card">
+        <h2 className="section-title">📚 Study (2026-27 CBSE Batch)</h2>
+        <div>
           {subjects.map((subject) => (
-            <div key={subject} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-              <label style={{ width: '150px' }}>{subject}</label>
+            <div key={subject} className="study-item">
+              <label className="study-label">{subject}</label>
               <input
                 type="range"
                 min="0"
                 max="100"
                 value={studyProgress[subject]}
                 onChange={(e) => handleStudyChange(subject, e.target.value)}
-                style={{ flexGrow: 1, margin: '0 15px' }}
+                className="study-range"
               />
-              <span style={{ width: '50px', textAlign: 'right' }}>{studyProgress[subject]}%</span>
+              <span className="study-value">{studyProgress[subject]}%</span>
             </div>
           ))}
         </div>
       </section>
 
       {/* Money Section */}
-      <section style={{ marginBottom: '30px', padding: '20px', border: '1px solid #ccc', borderRadius: '8px' }}>
-        <h2>💰 Money & Content</h2>
+      <section className="section-card">
+        <h2 className="section-title">💰 Money & Content</h2>
 
-        <div style={{ marginBottom: '20px' }}>
-          <h3>Share Market</h3>
-          <label>
-            <strong>Daily P&L: </strong>
+        <div className="money-grid">
+          <div className="input-group">
+            <h3>Share Market</h3>
+            <label className="input-label">Daily P&L:</label>
             <input
               type="text"
               placeholder="e.g. +$50 or -₹1000"
               value={dailyPL}
               onChange={(e) => setDailyPL(e.target.value)}
-              style={{ padding: '5px', marginLeft: '10px' }}
+              className="text-input"
             />
-          </label>
-        </div>
+          </div>
 
-        <div>
-          <h3>Content Creation</h3>
-          <p><strong>Goal:</strong> 2 videos per week, reach 1k subscribers.</p>
-          <label style={{ display: 'block', marginTop: '10px' }}>
-            <strong>Progress/Notes:</strong>
+          <div className="input-group">
+            <h3>Content Creation</h3>
+            <p style={{ margin: '0 0 10px 0', fontSize: '0.9rem', color: '#6b7280' }}>
+              <strong>Goal:</strong> 2 videos per week, reach 1k subscribers.
+            </p>
+            <label className="input-label">Progress/Notes:</label>
             <textarea
-              rows="3"
-              style={{ width: '100%', marginTop: '5px', padding: '8px' }}
+              rows={3}
               placeholder="Track uploads, views, etc."
               value={contentProgress}
               onChange={(e) => setContentProgress(e.target.value)}
+              className="textarea-input"
             />
-          </label>
+          </div>
         </div>
       </section>
     </div>
