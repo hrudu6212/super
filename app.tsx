@@ -12,29 +12,15 @@ export default function ImprovementDashboard() {
     subjects.reduce((acc, subject) => ({ ...acc, [subject]: 0 }), {})
   );
 
-  // Pre-seed some fake data so the chart looks good immediately
-  const [studyLogs, setStudyLogs] = useState([
-    { date: '10/01', avg: 10 },
-    { date: '10/05', avg: 15 },
-    { date: '10/10', avg: 22 },
-    { date: '10/15', avg: 25 },
-    { date: '10/20', avg: 30 },
-  ]);
+  const [studyLogs, setStudyLogs] = useState([]);
 
   // Money State
   const [dailyPL, setDailyPL] = useState('');
-  const [moneyLogs, setMoneyLogs] = useState([
-    { date: '10/18', pl: '+$120' },
-    { date: '10/19', pl: '-$40' },
-    { date: '10/20', pl: '+$200' },
-  ]);
+  const [moneyLogs, setMoneyLogs] = useState([]);
 
   // Content State
   const [contentProgress, setContentProgress] = useState('');
-  const [contentLogs, setContentLogs] = useState([
-    { date: '10/15', note: 'Uploaded Physics study vlog. 200 views.' },
-    { date: '10/19', note: 'Shorts on math trick went viral! +50 subs.' }
-  ]);
+  const [contentLogs, setContentLogs] = useState([]);
 
   const handleStudyChange = (subject, value) => {
     setStudyProgress((prev) => ({
